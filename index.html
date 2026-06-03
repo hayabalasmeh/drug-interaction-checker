@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drug Interaction Checker</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body{font-family:Arial;max-width:1400px;margin:auto;padding:20px}
+.banner{background:#0b5; color:white; padding:15px; border-radius:8px}
+input{padding:10px;margin:5px;width:280px}
+button{padding:10px}
+table{border-collapse:collapse;width:100%;margin-top:15px}
+th,td{border:1px solid #ddd;padding:8px}
+.major{background:#ffd6d6}
+.moderate{background:#fff0c9}
+.minor{background:#e3ffe3}
+</style>
+</head>
+<body>
+<div class="banner">
+<h1>Hospital Drug Interaction Checker</h1>
+<p>Advanced PWA Version</p>
+</div>
+
+<input id="drugA" placeholder="Drug A">
+<input id="drugB" placeholder="Drug B">
+<button onclick="search()">Search</button>
+<button onclick="exportPDF()">Export PDF</button>
+
+<h3 id="stats"></h3>
+<div id="count"></div>
+<div id="results"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
