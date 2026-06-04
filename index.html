@@ -33,5 +33,159 @@ th,td{border:1px solid #ddd;padding:8px}
 <div id="results"></div>
 
 <script src="app.js"></script>
+  <!-- Footer -->
+<footer class="app-footer">
+    <a href="#" id="referencesBtn" class="references-link">
+        📚 References
+    </a>
+</footer>
+
+<!-- References Modal -->
+<div id="referencesModal" class="modal">
+    <div class="modal-content">
+
+        <span class="close">&times;</span>
+
+        <h2>
+            Al-Hussein New Salt Hospital<br>
+            Major Drug–Drug Interaction (DDI) Protocol References
+        </h2>
+
+        <ol>
+            <li>Lexicomp Online, Drug Interactions: Wolters Kluwer Health, 2025 update.</li>
+            <li>Micromedex® Solutions (IBM Watson Health), Drug Interactions Database.</li>
+            <li>Drugs.com Interaction Checker.</li>
+            <li>Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th Edition (2023).</li>
+            <li>AHFS Drug Information, American Society of Health-System Pharmacists, 2024 Edition.</li>
+            <li>UpToDate® – Digoxin Drug Information and Interaction References (updated 2025).</li>
+            <li>FDA Drug Label: Digoxin (Lanoxin®), Revised 2023.</li>
+            <li>European Society of Cardiology (ESC) Heart Failure Guidelines, 2023.</li>
+            <li>Stockley's Drug Interactions, 12th Edition, 2022.</li>
+            <li>FDA Drug Safety Communications, 2024.</li>
+            <li>EMA Pharmacovigilance Updates – CYP1A2 Inhibitors and Tizanidine, 2023.</li>
+            <li>Goodman & Gilman's The Pharmacological Basis of Therapeutics, 14th Edition, McGraw-Hill, 2023.</li>
+            <li>DrugBank Online – Theophylline and Metabolic Interactions Profile, accessed October 2025.</li>
+            <li>AHFS Drug Information, 2024.</li>
+            <li>British National Formulary (BNF) 87, NICE Publications, 2024.</li>
+            <li>U.S. FDA Drug Safety Communications, 2024.</li>
+            <li>ESC Guidelines for the Management of Cardiovascular Diseases, 2023.</li>
+            <li>WHO Model Formulary, 2023 Revision.</li>
+        </ol>
+
+        <div class="modal-footer">
+            Pharmacy Department – Al-Hussein New Salt Hospital
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+/* Footer */
+.app-footer{
+    text-align:center;
+    margin-top:30px;
+    padding:12px;
+    border-top:1px solid #e0e0e0;
+}
+
+.references-link{
+    color:#005b96;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+}
+
+.references-link:hover{
+    text-decoration:underline;
+}
+
+/* Modal */
+.modal{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+.modal-content{
+    background:#fff;
+    width:90%;
+    max-width:900px;
+    max-height:85vh;
+    overflow-y:auto;
+    margin:4% auto;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    position:relative;
+}
+
+.modal-content h2{
+    color:#005b96;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.modal-content ol{
+    line-height:1.8;
+    padding-left:25px;
+}
+
+.close{
+    position:absolute;
+    right:20px;
+    top:15px;
+    font-size:30px;
+    cursor:pointer;
+    color:#666;
+}
+
+.close:hover{
+    color:#000;
+}
+
+.modal-footer{
+    margin-top:25px;
+    text-align:center;
+    font-size:13px;
+    color:#666;
+    border-top:1px solid #eee;
+    padding-top:12px;
+}
+
+</style>
+
+<script>
+const modal = document.getElementById("referencesModal");
+const btn = document.getElementById("referencesBtn");
+const closeBtn = document.querySelector(".close");
+
+btn.addEventListener("click", function(e){
+    e.preventDefault();
+    modal.style.display = "block";
+});
+
+closeBtn.addEventListener("click", function(){
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", function(e){
+    if(e.target === modal){
+        modal.style.display = "none";
+    }
+});
+
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+        modal.style.display = "none";
+    }
+});
+</script>
 </body>
 </html>
