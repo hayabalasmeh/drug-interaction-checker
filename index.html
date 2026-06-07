@@ -22,133 +22,8 @@ th,td{border:1px solid #ddd;padding:8px}
 <h1>Hospital Drug Interaction Checker</h1>
 <p>Made by Haya Balasmeh</p>
 </div>
-<!-- References Button -->
-<button id="referencesBtn" class="ref-btn">
-    References
-</button>
 
-<!-- Modal -->
-<div id="referencesModal" class="modal">
 
-    <div class="modal-content">
-
-        <span class="close">&times;</span>
-
-        <h2>
-            References for AlHussain New Salt Hospital – Major Drug–Drug Interaction (DDI) Protocol
-        </h2>
-
-        <ol>
-            <li>Lexicomp Online, Drug Interactions: Wolters Kluwer Health, 2025 update.</li>
-            <li>Micromedex® Solutions (IBM Watson Health), Drug Interactions Database.</li>
-            <li>Drugs.com Interaction Checker.</li>
-            <li>Goodman & Gilman’s The Pharmacological Basis of Therapeutics, 14th Edition (2023).</li>
-            <li>AHFS Drug Information (American Society of Health-System Pharmacists), 2024 Edition.</li>
-            <li>UpToDate® – "Digoxin: Drug Information" and "Interactions of digoxin with other drugs" (updated 2025).</li>
-            <li>FDA Drug Label: Digoxin (Lanoxin®). Revised 2023 – U.S. Food and Drug Administration.</li>
-            <li>European Society of Cardiology (ESC) Heart Failure Guidelines, 2023.</li>
-            <li>Stockley’s Drug Interactions, 12th Edition, Pharmaceutical Press, 2022.</li>
-            <li>FDA Drug Safety Communications (2024).</li>
-            <li>European Medicines Agency (EMA) Pharmacovigilance Updates – CYP1A2 inhibitors and tizanidine (2023).</li>
-            <li>Goodman & Gilman’s The Pharmacological Basis of Therapeutics, 14th Edition, McGraw-Hill, 2023.</li>
-            <li>DrugBank Online – Theophylline and metabolic interactions profile, accessed October 2025.</li>
-            <li>AHFS Drug Information, American Society of Health-System Pharmacists, 2024.</li>
-            <li>British National Formulary (BNF) 87, NICE Publications, 2024.</li>
-            <li>U.S. Food and Drug Administration (FDA). Drug Safety Communications, 2024.</li>
-            <li>European Society of Cardiology (ESC) Guidelines for the Management of Cardiovascular Diseases, 2023. Used for combining ACEI/ARBs, NSAIDs, and anticoagulant monitoring.</li>
-            <li>World Health Organization (WHO). Model Formulary, 2023 revision.</li>
-        </ol>
-
-    </div>
-</div>
-
-<style>
-.ref-btn {
-    background-color: #005b96;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.ref-btn:hover {
-    opacity: 0.9;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    inset: 0;
-    background-color: rgba(0,0,0,0.65);
-}
-
-.modal-content {
-    background: #ffffff;
-    width: 90%;
-    max-width: 950px;
-    max-height: 85vh;
-    overflow-y: auto;
-    margin: 4% auto;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.25);
-    position: relative;
-}
-
-.modal-content h2 {
-    color: #005b96;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.modal-content ol {
-    line-height: 1.8;
-    padding-left: 25px;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-    color: #666;
-}
-
-.close:hover {
-    color: #000;
-}
-</style>
-
-<script>
-const modal = document.getElementById("referencesModal");
-const btn = document.getElementById("referencesBtn");
-const closeBtn = document.querySelector(".close");
-
-btn.addEventListener("click", function () {
-    modal.style.display = "block";
-});
-
-closeBtn.addEventListener("click", function () {
-    modal.style.display = "none";
-});
-
-window.addEventListener("click", function (event) {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});
-
-document.addEventListener("keydown", function(event) {
-    if (event.key === "Escape") {
-        modal.style.display = "none";
-    }
-});
-</script>
 <input id="drugA" placeholder="Drug A">
 <input id="drugB" placeholder="Drug B">
 <button onclick="search()">Search</button>
@@ -160,7 +35,107 @@ document.addEventListener("keydown", function(event) {
 
 <script src="app.js"></script>
  
+<!-- REFERENCES LINK (Place in Footer) -->
 
+<div style="text-align:center; margin-top:20px;">
+  <a href="#" onclick="openReferences(); return false;"
+     style="color:#0b5ed7; font-size:14px; text-decoration:none;">
+     📚 References
+  </a>
+</div>
+
+<!-- REFERENCES MODAL -->
+
+<div id="referencesModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeReferences()">&times;</span>
+
+```
+<h2>Al-Hussein Al-Salt New Hospital</h2>
+<h3>Major Drug–Drug Interaction (DDI) Protocol References</h3>
+
+<ol>
+  <li>Lexicomp Online, Drug Interactions. Wolters Kluwer Health, 2025 Update.</li>
+  <li>Micromedex® Solutions (IBM Watson Health), Drug Interactions Database.</li>
+  <li>Drugs.com Interaction Checker.</li>
+  <li>Goodman & Gilman’s The Pharmacological Basis of Therapeutics, 14th Edition (2023).</li>
+  <li>AHFS Drug Information, American Society of Health-System Pharmacists, 2024 Edition.</li>
+  <li>UpToDate® – “Digoxin: Drug Information” and “Interactions of Digoxin with Other Drugs” (Updated 2025).</li>
+  <li>FDA Drug Label: Digoxin (Lanoxin®). Revised 2023.</li>
+  <li>European Society of Cardiology (ESC) Heart Failure Guidelines, 2023.</li>
+  <li>Stockley’s Drug Interactions, 12th Edition. Pharmaceutical Press, 2022.</li>
+  <li>FDA Drug Safety Communications, 2024.</li>
+  <li>European Medicines Agency (EMA) Pharmacovigilance Updates – CYP1A2 Inhibitors and Tizanidine (2023).</li>
+  <li>Goodman & Gilman’s The Pharmacological Basis of Therapeutics, 14th Edition. McGraw-Hill, 2023.</li>
+  <li>DrugBank Online – Theophylline and Metabolic Interactions Profile. Accessed October 2025.</li>
+  <li>AHFS Drug Information. American Society of Health-System Pharmacists, 2024.</li>
+  <li>British National Formulary (BNF) 87. NICE Publications, 2024.</li>
+  <li>U.S. Food and Drug Administration (FDA). Drug Safety Communications, 2024.</li>
+  <li>European Society of Cardiology (ESC) Guidelines for the Management of Cardiovascular Diseases, 2023. Used for combining ACEI/ARBs, NSAIDs, and anticoagulant monitoring.</li>
+  <li>World Health Organization (WHO). Model Formulary, 2023 Revision.</li>
+</ol>
+
+<p style="margin-top:20px; font-size:13px; color:#666;">
+  Pharmacy Department – Al-Hussein Al-Salt New Hospital
+</p>
+```
+
+  </div>
+</div>
+
+<style>
+.modal {
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  overflow:auto;
+  background:rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background:#fff;
+  margin:5% auto;
+  padding:25px;
+  width:85%;
+  max-width:900px;
+  border-radius:12px;
+  max-height:80vh;
+  overflow-y:auto;
+  box-shadow:0 4px 20px rgba(0,0,0,0.3);
+}
+
+.close {
+  float:right;
+  font-size:28px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.close:hover {
+  color:red;
+}
+</style>
+
+<script>
+function openReferences() {
+  document.getElementById("referencesModal").style.display = "block";
+}
+
+function closeReferences() {
+  document.getElementById("referencesModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("referencesModal");
+  if (event.target === modal) {
+      modal.style.display = "none";
+  }
+}
+</script>
 </body>
 
 
